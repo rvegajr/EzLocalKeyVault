@@ -1,0 +1,12 @@
+{
+  "DB_SERVER": "prod-db-server.example.com",
+  "DB_NAME": "ExampleDb_Prod",
+  "DB_USER": "$(AZURE_KEY_VAULT:DbUser)",
+  "DB_PASSWORD": "$(AZURE_KEY_VAULT:DbPassword)",
+  "API_KEY": "$(AZURE_KEY_VAULT:ApiKey)",
+  "JWT_SECRET": "$(AZURE_KEY_VAULT:JwtSecret)",
+  "SMTP_USERNAME": "$(AZURE_KEY_VAULT:SmtpUsername)",
+  "SMTP_PASSWORD": "$(AZURE_KEY_VAULT:SmtpPassword)",
+  
+  "ConnectionStrings:DefaultConnection": "Server=prod-db-server.example.com;Database=ExampleDb_Prod;User Id=$(AZURE_KEY_VAULT:DbUser);Password=$(AZURE_KEY_VAULT:DbPassword);TrustServerCertificate=True"
+}

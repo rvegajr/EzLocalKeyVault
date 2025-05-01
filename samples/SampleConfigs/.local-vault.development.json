@@ -1,0 +1,14 @@
+{
+  "DB_SERVER": "localhost",
+  "DB_NAME": "ExampleDb_Dev",
+  "DB_USER": "dev_user",
+  "DB_PASSWORD": "Dev_P@ssw0rd!",
+  "API_KEY": "sk_test_dev_12345",
+  "JWT_SECRET": "dev_environment_jwt_secret_key_for_local_testing",
+  "SMTP_USERNAME": "dev-smtp@example.com",
+  "SMTP_PASSWORD": "dev_smtp_password",
+  
+  "ConnectionStrings:DefaultConnection": "Server=localhost;Database=ExampleDb_Dev;User Id=dev_user;Password=Dev_P@ssw0rd!;TrustServerCertificate=True",
+  "FeatureFlags:EnableNewUI": true,
+  "FeatureFlags:EnableBetaFeatures": true
+}

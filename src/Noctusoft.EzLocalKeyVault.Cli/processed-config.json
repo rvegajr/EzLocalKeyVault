@@ -1,0 +1,16 @@
+{
+  "ApiSettings": {
+    "ApiKey": "abc123xyz456",
+    "BaseUrl": "https://api.example.com/v1"
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=testdb;User Id=dbuser;Password=securepassword123;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  }
+}

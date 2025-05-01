@@ -1,0 +1,14 @@
+{
+  "DB_SERVER": "localhost",
+  "DB_NAME": "ExampleDb",
+  "DB_USER": "dbuser",
+  "DB_PASSWORD": "P@ssw0rd123!",
+  "API_KEY": "sk_test_abcdef123456789",
+  "JWT_SECRET": "very_long_and_secure_jwt_secret_key_for_development_only",
+  "SMTP_USERNAME": "smtp@example.com",
+  "SMTP_PASSWORD": "smtp_password_123",
+  
+  "ConnectionStrings:DefaultConnection": "Server=override-server;Database=override-db;User Id=override-user;Password=override-password;",
+  "ApiSettings:ApiUrl": "https://dev-api.example.com",
+  "FeatureFlags:EnableBetaFeatures": true
+}

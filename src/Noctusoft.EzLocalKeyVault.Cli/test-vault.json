@@ -1,0 +1,8 @@
+{
+  "DB_SERVER": "localhost",
+  "DB_NAME": "testdb",
+  "DB_USER": "dbuser",
+  "DB_PASSWORD": "securepassword123",
+  "API_KEY": "abc123xyz456",
+  "API_BASE_URL": "https://api.example.com/v1"
+}

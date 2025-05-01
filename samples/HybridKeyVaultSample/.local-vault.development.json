@@ -1,0 +1,9 @@
+{
+  "API_KEY": "sample-api-key-for-development",
+  "DB_SERVER": "localhost",
+  "DB_NAME": "SampleDb",
+  "DB_USER": "dev_user",
+  "DB_PASSWORD": "dev_password",
+  "SERVICE_HOST": "localhost",
+  "SERVICE_PORT": "5000"
+}

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>ez-hybrid-keyvault</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <Version>1.0.0</Version>
+    <Authors>Noctusoft</Authors>
+    <Company>Noctusoft</Company>
+    <Description>Command-line tool for working with the hybrid Azure/Local key vault system</Description>
+    <PackageTags>keyvault;azure;secrets;cli;configuration</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Noctusoft.EzAzureLocalKeyVault\Noctusoft.EzAzureLocalKeyVault.csproj" />
+  </ItemGroup>
+
+</Project>

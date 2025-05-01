@@ -6,6 +6,7 @@ no-bump-message: '\+semver:\s?(none|skip)'
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 tag-prefix: 'v'
+next-version: 1.0.1
 branches:
   main:
     regex: ^master$|^main$

@@ -9,7 +9,7 @@ The easiest way to get started is with the hybrid key vault integration, which a
 ### 1. Install the NuGet Package
 
 ```bash
-dotnet add package Noctusoft.EzAzureLocalKeyVault
+dotnet add package Noctusoft.EzAzureLocalKeyVault --version 1.0.1
 ```
 
 ### 2. Add to Your Application (Single Line Usage)
@@ -162,7 +162,7 @@ That's it! The library will automatically:
 If you only need local key vault functionality without Azure Key Vault integration, you can use the original library:
 
 ```bash
-dotnet add package Noctusoft.EzLocalKeyVault
+dotnet add package Noctusoft.EzLocalKeyVault --version 1.0.1
 ```
 
 ### Basic Usage
@@ -196,7 +196,14 @@ When developing applications that use Azure Key Vault in production, it can be c
 ## Installation
 
 ```bash
-dotnet add package Noctusoft.EzLocalKeyVault
+# For local key vault only
+dotnet add package Noctusoft.EzLocalKeyVault --version 1.0.1
+
+# For hybrid Azure/Local key vault
+dotnet add package Noctusoft.EzAzureLocalKeyVault --version 1.0.1
+
+# For configuration validation and typed configuration support
+dotnet add package Noctusoft.EzLocalKeyVault.Configuration --version 1.0.1
 ```
 
 ## Configuration Reference

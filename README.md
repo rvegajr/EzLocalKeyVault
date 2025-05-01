@@ -298,6 +298,40 @@ app.UseEzLocalKeyVaultDiagnostics();
 
 For more details, see the [Diagnostics documentation](docs/Diagnostics.md).
 
+## Advanced Usage - Configuration Builder Integration
+
+If you want to integrate key vault resolution into your existing configuration setup, you can use the `ResolveFromLocalKeyvault` extension method:
+
+```csharp
+public static void ConfigureEnvironmentSpecificSettings(ConfigurationBuilder configBuilder)
+{
+    // Base configuration is always loaded
+    configBuilder.SetBasePath(Directory.GetCurrentDirectory());
+    configBuilder.AddJsonFile("appsettings.json", false, true);
+
+    // Load environment-specific settings
+    var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
+    configBuilder.AddJsonFile($"appsettings.{environmentName}.json", true, true);
+
+    // Resolve values from local key vault in development
+    if (environmentName.Equals("Development", StringComparison.OrdinalIgnoreCase))
+    {
+        configBuilder.ResolveFromLocalKeyvault();
+    }
+
+    // Add environment variables last for overrides
+    configBuilder.AddEnvironmentVariables();
+}
+```
+
+This approach allows you to:
+1. Load your base configuration files
+2. Apply environment-specific settings
+3. Resolve key vault values where needed
+4. Override with environment variables
+
+For a complete example, check out the `samples/ConfigurationSample` directory.
+
 ## Security Notice
 
 This package is designed for local development environments only and should not be used in production. The local vault file is stored in plain text and does not provide the same level of security as Azure Key Vault.

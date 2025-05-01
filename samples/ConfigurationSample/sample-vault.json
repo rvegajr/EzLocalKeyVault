@@ -1,0 +1,4 @@
+{
+  "KeyVault:ConnectionString": "Server=localhost;Database=MyApp;User Id=sa;Password=MySecurePassword123!",
+  "KeyVault:ApiKey": "my-super-secret-api-key-123"
+}

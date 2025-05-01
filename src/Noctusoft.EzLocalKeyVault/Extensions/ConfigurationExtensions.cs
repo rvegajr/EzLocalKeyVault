@@ -43,6 +43,37 @@ public static class ConfigurationExtensions
     }
 
     /// <summary>
+    /// Resolves configuration values from a local key vault file.
+    /// This method will apply substitutions from the local key vault to the configuration.
+    /// </summary>
+    /// <param name="builder">The configuration builder.</param>
+    /// <param name="vaultFilePath">Optional path to the local vault file. If not specified, defaults to ".local-vault.json".</param>
+    /// <param name="reloadOnChange">Whether to reload the configuration when the vault file changes. Defaults to true.</param>
+    /// <returns>The configuration builder for chaining.</returns>
+    public static IConfigurationBuilder ResolveFromLocalKeyvault(
+        this IConfigurationBuilder builder,
+        string? vaultFilePath = null,
+        bool reloadOnChange = true)
+    {
+        // Create a temporary logger for initial setup
+        using var loggerFactory = Microsoft.Extensions.Logging.LoggerFactory.Create(builder => builder.AddConsole());
+        var logger = loggerFactory.CreateLogger<LocalKeyVault>();
+
+        var options = new LocalKeyVaultOptions
+        {
+            VaultFilePath = vaultFilePath ?? ".local-vault.json",
+            ReloadOnChange = reloadOnChange
+        };
+
+        var keyVault = new LocalKeyVault(options, logger);
+
+        // Apply substitutions to the configuration
+        keyVault.ApplySubstitutions(builder);
+
+        return builder;
+    }
+
+    /// <summary>
     /// Adds local key vault services to the service collection.
     /// </summary>
     /// <param name="services">The service collection.</param>

@@ -6,14 +6,20 @@
         <Nullable>enable</Nullable>
         <Version>1.0.1</Version>
         <PackageVersion>1.0.1</PackageVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <FileVersion>1.0.0.0</FileVersion>
+        <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <FileVersion>1.0.1.0</FileVersion>
         <Authors>Noctusoft</Authors>
         <Description>A lightweight, local key vault implementation for .NET applications that replicates Azure Key Vault functionality for local development environments.</Description>
         <PackageTags>configuration;keyvault;secrets;development</PackageTags>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReleaseNotes>
+            - Added comprehensive nullable property support
+            - Updated documentation with detailed examples
+            - Fixed validation issues
+            - Improved configuration handling
+        </PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

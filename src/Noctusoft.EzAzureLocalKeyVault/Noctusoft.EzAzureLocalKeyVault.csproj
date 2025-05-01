@@ -7,9 +7,10 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>A utility library that simplifies using either Azure Key Vault or local key vault based on environment conditions.</Description>
         <PackageTags>configuration;azure;keyvault;secrets;development</PackageTags>
-        <Version>1.0.0</Version>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <FileVersion>1.0.0.0</FileVersion>
+        <Version>1.0.1</Version>
+        <PackageVersion>1.0.1</PackageVersion>
+        <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <FileVersion>1.0.1.0</FileVersion>
         <Authors>Noctusoft</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>

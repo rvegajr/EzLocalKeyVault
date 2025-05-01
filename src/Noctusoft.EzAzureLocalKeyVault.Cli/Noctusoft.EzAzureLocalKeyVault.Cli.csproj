@@ -8,7 +8,8 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ez-hybrid-keyvault</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Noctusoft</Authors>
     <Company>Noctusoft</Company>
     <Description>Command-line tool for working with the hybrid Azure/Local key vault system</Description>
